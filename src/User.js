@@ -14,7 +14,7 @@ export default class User extends React.Component {
           name: 'name' + this.props.params.userID
         }
       })
-    }, 2000);
+    }, 200);
   }
   render() {
     return (

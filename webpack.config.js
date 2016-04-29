@@ -14,7 +14,8 @@ module.exports = {
     publicPath: '/build/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
   ],
   module: {
     loaders: [{
@@ -22,5 +23,8 @@ module.exports = {
       loaders: ['babel'],
       include: path.join(__dirname, 'src')
     }]
+  },
+  dev: {
+    historyApiFallback: true
   }
 };
